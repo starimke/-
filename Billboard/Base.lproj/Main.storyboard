@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Storyboard BoardViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main Storyboard BoardViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Billboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIe-JX-82U" customClass="TextField">
+                                <rect key="frame" x="64" y="20" width="768" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Oi-n6-r44">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="buN-tz-qx4"/>
+                                            <constraint firstAttribute="width" constant="600" id="cRl-ld-xOr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="billBoardTextEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="voG-kh-mYv"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR8-OY-8w8">
+                                        <rect key="frame" x="610" y="5" width="61" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="보내기"/>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3N9-a8-0BS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bn8-2Q-tpf">
+                                        <rect key="frame" x="681" y="5" width="67" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="randomColorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qwr-2Y-P7k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="PvO-hv-GEg"/>
+                                    <constraint firstItem="aR8-OY-8w8" firstAttribute="leading" secondItem="4Oi-n6-r44" secondAttribute="trailing" constant="10" id="Pxe-N3-DrH"/>
+                                    <constraint firstItem="Bn8-2Q-tpf" firstAttribute="leading" secondItem="aR8-OY-8w8" secondAttribute="trailing" constant="10" id="bDd-ct-7mr"/>
+                                    <constraint firstAttribute="height" constant="50" id="dfW-gA-6RC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-EN-GKC">
+                                <rect key="frame" x="64" y="120" width="768" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BZy-RL-ZnF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nIA-EN-GKC" firstAttribute="top" secondItem="RIe-JX-82U" secondAttribute="bottom" constant="50" id="Ebe-B4-oMz"/>
+                            <constraint firstItem="RIe-JX-82U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Mio-Pq-YWa"/>
+                            <constraint firstItem="nIA-EN-GKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gJd-CK-loB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIA-EN-GKC" secondAttribute="trailing" constant="20" id="hvs-DQ-MYP"/>
+                            <constraint firstItem="RIe-JX-82U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kp4-n9-y0m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIe-JX-82U" secondAttribute="trailing" constant="20" id="mI0-Qa-olB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billBoardScreen" destination="nIA-EN-GKC" id="rtj-Hj-MLG"/>
+                        <outlet property="billBoardText" destination="4Oi-n6-r44" id="vxj-15-74g"/>
+                        <outlet property="randomColorButton" destination="Bn8-2Q-tpf" id="X4U-6c-0QZ"/>
+                        <outlet property="sendButton" destination="aR8-OY-8w8" id="dKK-5s-Rcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QoH-1t-Wcx">
+                    <connections>
+                        <action selector="tapped:" destination="BYZ-38-t0r" id="sDd-7V-yc8"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="cKr-MH-MCl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="28.794642857142854" y="82.608695652173921"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
